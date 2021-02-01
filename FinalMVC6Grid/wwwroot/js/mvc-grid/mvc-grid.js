@@ -120,6 +120,7 @@ class MvcGrid {
         });
     }
 
+
     reload() {
         const grid = this;
 
@@ -606,7 +607,7 @@ class MvcGridPager {
         }
 
         pager.grid.element.querySelectorAll(".mvc-grid-pager-rows").forEach(rowsPerPage => {
-            rowsPerPage.addEventListener("change", function() {
+            rowsPerPage.addEventListener("change", function () {
                 const rows = parseInt(this.value);
 
                 if (rows) {
@@ -898,11 +899,11 @@ class MvcGridFilter {
                     ${filter.renderFilter("first")}
                 </div>
                 ${filter.mode == "excel" && filter.type == "double"
-                    ? `${filter.renderOperator()}
+                ? `${filter.renderOperator()}
                     <div class="popup-filter">
                         ${filter.renderFilter("second")}
                     </div>`
-                    : ""}
+                : ""}
                 ${filter.renderActions()}`;
     }
     renderFilter(name) {
@@ -918,10 +919,10 @@ class MvcGridFilter {
                     </select>
                 </div>
                 <div class="popup-group">${options
-                    ? `<select class="mvc-grid-value" data-filter="${name}"${multiple}>
+                ? `<select class="mvc-grid-value" data-filter="${name}"${multiple}>
                           ${options.innerHTML}
                        </select>`
-                    : `<input class="mvc-grid-value" data-filter="${name}">`}
+                : `<input class="mvc-grid-value" data-filter="${name}">`}
                 </div>`;
     }
     renderOperator() {
@@ -957,10 +958,10 @@ class MvcGridFilter {
                     filter.operator = this.value;
                 });
             }
-        } 
-            
-        
-        
+        }
+
+
+
     }
     bindMethods() {
         const filter = this.column.filter;
@@ -1032,9 +1033,9 @@ class MvcGridTextFilter extends MvcGridFilter {
 
         this.cssClasses = "mvc-grid-text-filter";
         if (column.name == "Name") {
-            this.methods = ["contains"];
+            this.methods = ["equals", "not-equals",];
         } else {
-        this.methods = ["contains", "equals", "not-equals", "starts-with", "ends-with"];
+            this.methods = ["contains", "equals", "not-equals", "starts-with", "ends-with"];
         }
 
     }
@@ -1058,8 +1059,8 @@ class MvcGridDateFilter extends MvcGridFilter {
         super(column);
 
         this.cssClasses = "mvc-grid-date-filter";
-        if (column.name=="DateOfBirth") {
-            this.methods = ["later-than-or-equal","earlier-than-or-equal"];
+        if (column.name == "DateOfBirth") {
+            this.methods = ["later-than-or-equal", "earlier-than-or-equal"];
         } else {
             this.methods = ["equals", "not-equals", "earlier-than", "later-than", "earlier-than-or-equal", "later-than-or-equal"];
         }
