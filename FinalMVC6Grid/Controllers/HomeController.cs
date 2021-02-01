@@ -25,19 +25,20 @@ namespace FinalMVC6Grid.Controllers
         {
         new EmployeeViewModel { Id = 1, Name = "Julio Avellaneda", Email = "julito_gtu@hotmail.com",EmployeeStatus="Inprogress",DateOfBirth=Convert.ToDateTime("2/1/2021")},
         new EmployeeViewModel { Id = 2, Name = "Juan Torres", Email = "jtorres@hotmail.com",EmployeeStatus="Close",DateOfBirth=Convert.ToDateTime("2/2/2021") },
-        new EmployeeViewModel { Id = 3, Name = "Oscar Camacho", Email = "oscar@hotmail.com",EmployeeStatus="Open",DateOfBirth=DateTime.Now },
-        new EmployeeViewModel { Id = 4, Name = "Gina Urrego", Email = "ginna@hotmail.com",EmployeeStatus="Inprogress",DateOfBirth=DateTime.Now },
-        new EmployeeViewModel { Id = 5, Name = "Nathalia Ramirez", Email = "natha@hotmail.com",EmployeeStatus="Inprogress",DateOfBirth=DateTime.Now },
-        new EmployeeViewModel { Id = 6, Name = "Raul Rodriguez", Email = "rodriguez.raul@hotmail.com",EmployeeStatus="Inprogress",DateOfBirth=DateTime.Now },
-        new EmployeeViewModel { Id = 7, Name = "Johana Espitia", Email = "johana_espitia@hotmail.com",EmployeeStatus="Inprogress",DateOfBirth=DateTime.Now }
+        new EmployeeViewModel { Id = 3, Name = "Oscar Camacho", Email = "oscar@hotmail.com",EmployeeStatus="Open",DateOfBirth=Convert.ToDateTime("2/3/2021")},
+        new EmployeeViewModel { Id = 4, Name = "Gina Urrego", Email = "ginna@hotmail.com",EmployeeStatus="Inprogress",DateOfBirth=Convert.ToDateTime("2/4/2021") },
+        new EmployeeViewModel { Id = 5, Name = "Nathalia Ramirez", Email = "natha@hotmail.com",EmployeeStatus="Inprogress",DateOfBirth=Convert.ToDateTime("2/5/2021") },
+        new EmployeeViewModel { Id = 6, Name = "Raul Rodriguez", Email = "rodriguez.raul@hotmail.com",EmployeeStatus="Inprogress",DateOfBirth=Convert.ToDateTime("2/6/2021") },
+        new EmployeeViewModel { Id = 7, Name = "Johana Espitia", Email = "johana_espitia@hotmail.com",EmployeeStatus="Inprogress",DateOfBirth=Convert.ToDateTime("2/7/2021") }
           };
 
 
             var emp = employees.AsQueryable();
-            ViewBag.TotalRows = emp.Count();
+          //  ViewBag.TotalRows = emp.Count();
 
 
-            return View(emp.Skip((page - 1 ?? 0) * (rows ?? 3)).Take(rows ?? 3));
+           // return View(emp.Skip((page - 1 ?? 0) * (rows ?? 3)).Take(rows ?? 3));
+            return View(emp);
         }
 
         public IActionResult Privacy()

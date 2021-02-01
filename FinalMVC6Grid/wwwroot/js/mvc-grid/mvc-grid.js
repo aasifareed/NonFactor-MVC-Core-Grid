@@ -946,7 +946,6 @@ class MvcGridFilter {
                 </div>`;
     }
     bindOperator() {
-        debugger;
         const filter = this.column.filter;
         if (this.column.filter.column.name == "DateOfBirth") {
             $('.mvc-grid-operator').hide();

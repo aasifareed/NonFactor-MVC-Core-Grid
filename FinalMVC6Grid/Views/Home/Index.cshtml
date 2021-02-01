@@ -16,10 +16,11 @@
         columns.Add(model => model.Name).Titled("Name");
         columns.Add(model => model.Email).Titled("Email Address");
         columns.Add(model => model.DateOfBirth).Titled("Date of Birth").Filterable(GridFilterType.Double);
+        columns.Add(model => model.EmployeeStatus).Titled("Employee Status").Filterable(GridFilterType.Multi);
+
     })
     .Empty("No data found")
     .Filterable()
     .Sortable()
     .Pageable()
 )
-
