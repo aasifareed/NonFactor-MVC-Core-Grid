@@ -24,7 +24,7 @@ namespace FinalMVC6Grid.Controllers
             List<EmployeeViewModel> employees = new List<EmployeeViewModel>()
         {
         new EmployeeViewModel { Id = 1, Name = "Julio Avellaneda", Email = "julito_gtu@hotmail.com",EmployeeStatus="Inprogress",DateOfBirth=Convert.ToDateTime("2/1/2021")},
-        new EmployeeViewModel { Id = 2, Name = "Juan Torres", Email = "jtorres@hotmail.com",EmployeeStatus="Close",DateOfBirth=Convert.ToDateTime("2/2/2021") },
+        new EmployeeViewModel { Id = 2, Name = "Juan Torres", Email = "jtorres@hotmail.com",EmployeeStatus="Closed",DateOfBirth=Convert.ToDateTime("2/2/2021") },
         new EmployeeViewModel { Id = 3, Name = "Oscar Camacho", Email = "oscar@hotmail.com",EmployeeStatus="Open",DateOfBirth=Convert.ToDateTime("2/3/2021")},
         new EmployeeViewModel { Id = 4, Name = "Gina Urrego", Email = "ginna@hotmail.com",EmployeeStatus="Inprogress",DateOfBirth=Convert.ToDateTime("2/4/2021") },
         new EmployeeViewModel { Id = 5, Name = "Nathalia Ramirez", Email = "natha@hotmail.com",EmployeeStatus="Inprogress",DateOfBirth=Convert.ToDateTime("2/5/2021") },
