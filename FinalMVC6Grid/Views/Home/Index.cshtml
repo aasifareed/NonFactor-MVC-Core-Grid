@@ -5,6 +5,10 @@
     ViewData["Title"] = "Home Page";
 }
 
+@{
+    List<SelectListItem> selectListItems = new List<SelectListItem>();
+    selectListItems= ViewBag.EmployeeStatusList;
+}
 
 <br />
 <br />
@@ -16,13 +20,8 @@
         columns.Add(model => model.Name).Titled("Name");
         columns.Add(model => model.Email).Titled("Email Address");
         columns.Add(model => model.DateOfBirth).Titled("Date of Birth").Filterable(GridFilterType.Double);
-        columns.Add(model => model.EmployeeStatus).Titled("Employee Status").UsingFilterOptions(new[]
-        {
-            new SelectListItem(),
-            new SelectListItem { Value = "Inprogress", Text = "Inprogress" },
-            new SelectListItem { Value = "Closed", Text = "Closed" },
-            new SelectListItem { Value = "Open", Text = "Open" }
-        }).Filterable(GridFilterType.Multi);
+        columns.Add(model => model.EmployeeStatus).Titled("Employee Status").UsingFilterOptions(selectListItems
+        ).Filterable(GridFilterType.Multi);
 
     })
     .Empty("No data found")
