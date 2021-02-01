@@ -1,0 +1,25 @@
+﻿@model IQueryable<FinalMVC6Grid.Models.EmployeeViewModel>
+@using System;
+@using NonFactors.Mvc.Grid;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<br />
+<br />
+<br />
+@(Html
+    .Grid(Model)
+    .Build(columns =>
+    {
+        columns.Add(model => model.Name).Titled("Name");
+        columns.Add(model => model.Email).Titled("Email Address");
+        columns.Add(model => model.DateOfBirth).Titled("Date of Birth").Filterable(GridFilterType.Double);
+    })
+    .Empty("No data found")
+    .Filterable()
+    .Sortable()
+    .Pageable()
+)
+

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NonFactors.Grid.Mvc6" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mvc.Grid.Core">
+      <HintPath>..\..\..\..\.nuget\packages\nonfactors.grid.core.mvc6\6.2.3\lib\netstandard2.0\Mvc.Grid.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
