@@ -1027,21 +1027,7 @@ class MvcGridFilter {
     }
 }
 
-class MvcGridTextFilter extends MvcGridFilter {
-    constructor(column) {
-        super(column);
 
-        this.cssClasses = "mvc-grid-text-filter";
-        if (column.name == "Name") {
-            this.methods = ["equals", "not-equals"];
-        } else if (column.name == "Email") {
-            this.methods = ["contains"];
-        } else {
-            this.methods = ["contains", "equals", "not-equals", "starts-with", "ends-with"];
-        }
-
-    }
-}
 
 class MvcGridNumberFilter extends MvcGridFilter {
     constructor(column) {
@@ -1056,19 +1042,7 @@ class MvcGridNumberFilter extends MvcGridFilter {
     }
 }
 
-class MvcGridDateFilter extends MvcGridFilter {
-    constructor(column) {
-        super(column);
 
-        this.cssClasses = "mvc-grid-date-filter";
-        if (column.name == "DateOfBirth") {
-            this.methods = ["later-than-or-equal", "earlier-than-or-equal"];
-        } else {
-            this.methods = ["equals", "not-equals", "earlier-than", "later-than", "earlier-than-or-equal", "later-than-or-equal"];
-        }
-
-    }
-}
 
 class MvcGridGuidFilter extends MvcGridFilter {
     constructor(column) {

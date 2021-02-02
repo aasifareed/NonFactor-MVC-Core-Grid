@@ -24,13 +24,6 @@ namespace FinalMVC6Grid
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddMvcGrid(filters =>
-            {
-                filters.Unregister(typeof(String), "starts-with");
-                filters.Unregister(typeof(String), "ends-with");
-            });
-
             services.AddControllersWithViews();
         }
 
