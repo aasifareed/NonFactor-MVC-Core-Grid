@@ -292,8 +292,8 @@ MvcGrid.lang = {
         "not-equals": "Not equals",
         "earlier-than": "Earlier than",
         "later-than": "Later than",
-        "earlier-than-or-equal": "Earlier than or equal",
-        "later-than-or-equal": "Later than or equal",
+        "earlier-than-or-equal": "From",
+        "later-than-or-equal": "To",
     },
     guid: {
         "equals": "Equals",
