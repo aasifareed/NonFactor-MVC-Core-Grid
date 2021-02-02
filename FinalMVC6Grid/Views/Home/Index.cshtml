@@ -19,7 +19,7 @@
     {
         columns.Add(model => model.Name).Titled("Name");
         columns.Add(model => model.Email).Titled("Email Address");
-        columns.Add(model => model.DateOfBirth).Titled("Date of Birth").Filterable(GridFilterType.Double);
+        columns.Add(model => model.DateOfBirth).Titled("Date of Birth").Formatted("{0:d}").Filterable(GridFilterType.Double);
         columns.Add(model => model.EmployeeStatus).Titled("Employee Status").UsingFilterOptions(selectListItems
         ).Filterable(GridFilterType.Multi);
 

@@ -1033,7 +1033,9 @@ class MvcGridTextFilter extends MvcGridFilter {
 
         this.cssClasses = "mvc-grid-text-filter";
         if (column.name == "Name") {
-            this.methods = ["equals", "not-equals",];
+            this.methods = ["equals", "not-equals"];
+        } else if (column.name == "Email") {
+            this.methods = ["contains"];
         } else {
             this.methods = ["contains", "equals", "not-equals", "starts-with", "ends-with"];
         }
